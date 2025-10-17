@@ -6,21 +6,21 @@
     "fileloc": 28,
     "instructions": 3,
     "name": "dut",
-    "total_instructions": 91
+    "total_instructions": 106
   },
   "1": {
     "basicblocks": 9,
     "calls": "",
     "file": "store_stream_to_master.hpp",
-    "fileloc": 43,
-    "instructions": 88,
+    "fileloc": 15,
+    "instructions": 103,
     "loads": {
-      "L": 2
+      "L": 3
     },
     "name": "storeStreamToMaster<32, 32, 32>",
     "stores": {
-      "L": 2
+      "L": 3
     },
-    "total_instructions": 88
+    "total_instructions": 103
   }
 }

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dut'" level="0">
-<item name = "Date">Fri Oct 17 00:26:09 2025
+<item name = "Date">Fri Oct 17 21:59:00 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">dut.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.30 ns, 8.546 ns, 0.89 ns</column>
+<column name="ap_clk">3.30 ns, 5.001 ns, 0.89 ns</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">17, 4294967280, 0.145 us, 36.703 sec, 18, 4294967281, no</column>
+<column name="">49, 1072, 0.245 us, 5.361 us, 50, 1073, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84">dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2, 3, 4294967235, 25.637 ns, 36.703 sec, 2, 4294967234, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99">dut_Pipeline_VITIS_LOOP_61_3, 2, 33, 10.002 ns, 0.165 us, 1, 32, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_dut_Pipeline_burst_loop_inner_loop_fu_86">dut_Pipeline_burst_loop_inner_loop, 35, 1027, 0.133 us, 3.902 us, 34, 1026, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_dut_Pipeline_residual_loop_fu_101">dut_Pipeline_residual_loop, 2, 33, 10.002 ns, 0.165 us, 1, 32, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,22 +51,22 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 194, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 1, 1272, 546, -</column>
+<column name="Instance">-, -, 903, 471, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, 0, 135, -</column>
 <column name="Register">-, -, 299, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, ~0, 1, 1, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 1, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="add_32ns_32ns_32_2_1_U25">add_32ns_32ns_32_2_1, 0, 0, 148, 36, 0</column>
-<column name="grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84">dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2, 0, 1, 959, 375, 0</column>
-<column name="grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99">dut_Pipeline_VITIS_LOOP_61_3, 0, 0, 17, 99, 0</column>
-<column name="sub_32ns_32ns_32_2_1_U26">sub_32ns_32ns_32_2_1, 0, 0, 148, 36, 0</column>
+<column name="add_32ns_32ns_32_2_1_U20">add_32ns_32ns_32_2_1, 0, 0, 148, 36, 0</column>
+<column name="grp_dut_Pipeline_burst_loop_inner_loop_fu_86">dut_Pipeline_burst_loop_inner_loop, 0, 0, 590, 300, 0</column>
+<column name="grp_dut_Pipeline_residual_loop_fu_101">dut_Pipeline_residual_loop, 0, 0, 17, 99, 0</column>
+<column name="sub_32ns_32ns_32_2_1_U21">sub_32ns_32ns_32_2_1, 0, 0, 148, 36, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -83,15 +83,15 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="sub_ln49_1_fu_184_p2">-, 0, 0, 34, 1, 27</column>
-<column name="sub_ln59_fu_192_p2">-, 0, 0, 14, 1, 6</column>
-<column name="empty_fu_225_p2">icmp, 0, 0, 34, 27, 1</column>
-<column name="icmp_ln48_fu_119_p2">icmp, 0, 0, 10, 2, 1</column>
-<column name="icmp_ln51_fu_207_p2">icmp, 0, 0, 34, 27, 1</column>
-<column name="empty_14_fu_230_p3">select, 0, 0, 26, 1, 26</column>
-<column name="nBurst_fu_198_p3">select, 0, 0, 27, 1, 27</column>
-<column name="select_ln59_1_fu_219_p3">select, 0, 0, 6, 1, 6</column>
-<column name="select_ln59_fu_251_p3">select, 0, 0, 9, 1, 9</column>
+<column name="sub_ln23_1_fu_186_p2">-, 0, 0, 34, 1, 27</column>
+<column name="sub_ln43_fu_194_p2">-, 0, 0, 14, 1, 6</column>
+<column name="empty_fu_227_p2">icmp, 0, 0, 34, 27, 1</column>
+<column name="icmp_ln22_fu_121_p2">icmp, 0, 0, 10, 2, 1</column>
+<column name="icmp_ln28_fu_209_p2">icmp, 0, 0, 34, 27, 1</column>
+<column name="empty_17_fu_232_p3">select, 0, 0, 26, 1, 26</column>
+<column name="nBurst_fu_200_p3">select, 0, 0, 27, 1, 27</column>
+<column name="select_ln43_1_fu_221_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln43_fu_253_p3">select, 0, 0, 9, 1, 9</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -107,27 +107,27 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">13, 0, 13, 0</column>
-<column name="empty_14_reg_345">26, 0, 26, 0</column>
-<column name="empty_reg_340">1, 0, 1, 0</column>
-<column name="grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99_ap_start_reg">1, 0, 1, 0</column>
-<column name="icmp_ln48_reg_258">1, 0, 1, 0</column>
-<column name="icmp_ln51_reg_325">1, 0, 1, 0</column>
-<column name="nBlks_reg_273">32, 0, 32, 0</column>
-<column name="nBurst_reg_315">27, 0, 27, 0</column>
-<column name="select_ln59_1_reg_335">6, 0, 6, 0</column>
-<column name="select_ln59_reg_355">4, 0, 9, 5</column>
-<column name="sub_ln49_1_reg_305">27, 0, 27, 0</column>
-<column name="sub_ln59_reg_310">6, 0, 6, 0</column>
-<column name="tmp_1_reg_284">27, 0, 27, 0</column>
-<column name="tmp_2_reg_350">26, 0, 31, 5</column>
-<column name="tmp_3_reg_278">1, 0, 1, 0</column>
-<column name="tmp_reg_295">27, 0, 27, 0</column>
-<column name="trunc_ln1_reg_263">32, 0, 32, 0</column>
-<column name="trunc_ln49_reg_320">26, 0, 26, 0</column>
-<column name="trunc_ln51_reg_330">4, 0, 4, 0</column>
-<column name="trunc_ln59_1_reg_300">5, 0, 5, 0</column>
-<column name="trunc_ln59_reg_290">5, 0, 5, 0</column>
+<column name="empty_17_reg_347">26, 0, 26, 0</column>
+<column name="empty_reg_342">1, 0, 1, 0</column>
+<column name="grp_dut_Pipeline_burst_loop_inner_loop_fu_86_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dut_Pipeline_residual_loop_fu_101_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln22_reg_260">1, 0, 1, 0</column>
+<column name="icmp_ln28_reg_327">1, 0, 1, 0</column>
+<column name="nBlks_reg_275">32, 0, 32, 0</column>
+<column name="nBurst_reg_317">27, 0, 27, 0</column>
+<column name="select_ln43_1_reg_337">6, 0, 6, 0</column>
+<column name="select_ln43_reg_357">4, 0, 9, 5</column>
+<column name="sub_ln23_1_reg_307">27, 0, 27, 0</column>
+<column name="sub_ln43_reg_312">6, 0, 6, 0</column>
+<column name="tmp_1_reg_286">27, 0, 27, 0</column>
+<column name="tmp_2_reg_352">26, 0, 30, 4</column>
+<column name="tmp_3_reg_280">1, 0, 1, 0</column>
+<column name="tmp_reg_297">27, 0, 27, 0</column>
+<column name="trunc_ln1_reg_265">32, 0, 32, 0</column>
+<column name="trunc_ln23_reg_322">26, 0, 26, 0</column>
+<column name="trunc_ln28_1_reg_332">4, 0, 4, 0</column>
+<column name="trunc_ln43_1_reg_302">5, 0, 5, 0</column>
+<column name="trunc_ln43_reg_292">5, 0, 5, 0</column>
 </table>
 </item>
 </section>

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'dut'
 ================================================================
 + General Information: 
-    * Date:           Fri Oct 17 00:26:10 2025
+    * Date:           Fri Oct 17 21:59:00 2025
     * Version:        2024.2 (Build 5238294 on Nov  8 2024)
     * Project:        dut.prj
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,16 +15,16 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------------------------------------------+--------+-------+------------+-----------+----------+------------+------------+----------+------+---------+-----------+-----------+-----+
-    |                     Modules                     |  Issue |       |  Latency   |  Latency  | Iteration|            |    Trip    |          |      |         |           |           |     |
-    |                     & Loops                     |  Type  | Slack |  (cycles)  |    (ns)   |  Latency |  Interval  |    Count   | Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
-    +-------------------------------------------------+--------+-------+------------+-----------+----------+------------+------------+----------+------+---------+-----------+-----------+-----+
-    |+ dut                                            |  Timing|  -6.14|  4294967280|  3.670e+10|         -|  4294967281|           -|        no|     -|  1 (~0%)|  1571 (1%)|   875 (1%)|    -|
-    | + dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2  |  Timing|  -6.14|  4294967235|  3.670e+10|         -|  4294967235|           -|        no|     -|  1 (~0%)|  959 (~0%)|  375 (~0%)|    -|
-    |  o VITIS_LOOP_51_1_VITIS_LOOP_52_2              |      II|   2.41|  4294967233|  3.670e+10|         3|           2|  2147483616|       yes|     -|        -|          -|          -|    -|
-    | + dut_Pipeline_VITIS_LOOP_61_3                  |  Timing|  -2.59|          33|    165.033|         -|          33|           -|        no|     -|        -|   17 (~0%)|   99 (~0%)|    -|
-    |  o VITIS_LOOP_61_3                              |       -|   2.41|          31|    155.031|         2|           1|          31|       yes|     -|        -|          -|          -|    -|
-    +-------------------------------------------------+--------+-------+------------+-----------+----------+------------+------------+----------+------+---------+-----------+-----------+-----+
+    +---------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                Modules                |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |      |    |           |           |     |
+    |                & Loops                |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +---------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ dut                                  |  Timing|  -2.59|     1072|  5.361e+03|         -|     1073|     -|        no|     -|   -|  1202 (1%)|   800 (1%)|    -|
+    | + dut_Pipeline_burst_loop_inner_loop  |  Timing|  -1.39|     1027|  3.902e+03|         -|     1027|     -|        no|     -|   -|  590 (~0%)|  300 (~0%)|    -|
+    |  o burst_loop_inner_loop              |      II|   2.41|     1025|  3.894e+03|         4|        2|   512|       yes|     -|   -|          -|          -|    -|
+    | + dut_Pipeline_residual_loop          |  Timing|  -2.59|       33|    165.033|         -|       33|     -|        no|     -|   -|   17 (~0%)|   99 (~0%)|    -|
+    |  o residual_loop                      |       -|   2.41|       31|    155.031|         2|        1|    31|       yes|     -|   -|          -|          -|    -|
+    +---------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
 
 
 ================================================================
@@ -90,36 +90,35 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-------------------------------------------------+-----+--------+---------------+--------+----------+---------+
-| Name                                            | DSP | Pragma | Variable      | Op     | Impl     | Latency |
-+-------------------------------------------------+-----+--------+---------------+--------+----------+---------+
-| + dut                                           | 1   |        |               |        |          |         |
-|   icmp_ln48_fu_119_p2                           |     |        | icmp_ln48     | setne  | auto     | 0       |
-|   add_32ns_32ns_32_2_1_U25                      |     |        | nBlks         | add    | fabric   | 1       |
-|   sub_32ns_32ns_32_2_1_U26                      |     |        | sub_ln49      | sub    | fabric   | 1       |
-|   sub_ln49_1_fu_184_p2                          |     |        | sub_ln49_1    | sub    | fabric   | 0       |
-|   nBurst_fu_198_p3                              |     |        | nBurst        | select | auto_sel | 0       |
-|   icmp_ln51_fu_207_p2                           |     |        | icmp_ln51     | setgt  | auto     | 0       |
-|   empty_fu_225_p2                               |     |        | empty         | setgt  | auto     | 0       |
-|   empty_14_fu_230_p3                            |     |        | empty_14      | select | auto_sel | 0       |
-|   select_ln59_fu_251_p3                         |     |        | select_ln59   | select | auto_sel | 0       |
-|   sub_ln59_fu_192_p2                            |     |        | sub_ln59      | sub    | fabric   | 0       |
-|   select_ln59_1_fu_219_p3                       |     |        | select_ln59_1 | select | auto_sel | 0       |
-|  + dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2 | 1   |        |               |        |          |         |
-|    icmp_31ns_31ns_1_2_1_U1                      |     |        | icmp_ln51     | seteq  | auto     | 1       |
-|    add_31ns_31ns_31_2_1_U2                      |     |        | add_ln51      | add    | fabric   | 1       |
-|    add_32ns_32ns_32_2_1_U3                      |     |        | add_ln51_1    | add    | fabric   | 1       |
-|    icmp_32ns_32ns_1_2_1_U4                      |     |        | icmp_ln52     | seteq  | auto     | 1       |
-|    select_ln50_fu_172_p3                        |     |        | select_ln50   | select | auto_sel | 0       |
-|    select_ln51_fu_179_p3                        |     |        | select_ln51   | select | auto_sel | 0       |
-|    add_32ns_32ns_32_2_1_U5                      |     |        | add_ln51_2    | add    | fabric   | 1       |
-|    select_ln51_1_fu_186_p3                      |     |        | select_ln51_1 | select | auto_sel | 0       |
-|    add_32ns_32ns_32_1_1_U6                      | 1   |        | add_ln56      | add    | dsp      | 0       |
-|  + dut_Pipeline_VITIS_LOOP_61_3                 | 0   |        |               |        |          |         |
-|    icmp_ln61_fu_124_p2                          |     |        | icmp_ln61     | setlt  | auto     | 0       |
-|    add_ln61_fu_130_p2                           |     |        | add_ln61      | add    | fabric   | 0       |
-|    add_ln65_fu_154_p2                           |     |        | add_ln65      | add    | fabric   | 0       |
-+-------------------------------------------------+-----+--------+---------------+--------+----------+---------+
++---------------------------------------+-----+--------+---------------+--------+----------+---------+
+| Name                                  | DSP | Pragma | Variable      | Op     | Impl     | Latency |
++---------------------------------------+-----+--------+---------------+--------+----------+---------+
+| + dut                                 | 0   |        |               |        |          |         |
+|   icmp_ln22_fu_121_p2                 |     |        | icmp_ln22     | setne  | auto     | 0       |
+|   add_32ns_32ns_32_2_1_U20            |     |        | nBlks         | add    | fabric   | 1       |
+|   sub_32ns_32ns_32_2_1_U21            |     |        | sub_ln23      | sub    | fabric   | 1       |
+|   sub_ln23_1_fu_186_p2                |     |        | sub_ln23_1    | sub    | fabric   | 0       |
+|   nBurst_fu_200_p3                    |     |        | nBurst        | select | auto_sel | 0       |
+|   icmp_ln28_fu_209_p2                 |     |        | icmp_ln28     | setgt  | auto     | 0       |
+|   empty_fu_227_p2                     |     |        | empty         | setgt  | auto     | 0       |
+|   empty_17_fu_232_p3                  |     |        | empty_17      | select | auto_sel | 0       |
+|   select_ln43_fu_253_p3               |     |        | select_ln43   | select | auto_sel | 0       |
+|   sub_ln43_fu_194_p2                  |     |        | sub_ln43      | sub    | fabric   | 0       |
+|   select_ln43_1_fu_221_p3             |     |        | select_ln43_1 | select | auto_sel | 0       |
+|  + dut_Pipeline_burst_loop_inner_loop | 0   |        |               |        |          |         |
+|    icmp_30ns_30ns_1_2_1_U1            |     |        | icmp_ln28     | seteq  | auto     | 1       |
+|    add_30ns_30ns_30_2_1_U2            |     |        | add_ln28_1    | add    | fabric   | 1       |
+|    or_ln25_fu_203_p2                  |     |        | or_ln25       | or     | auto     | 0       |
+|    select_ln28_fu_209_p3              |     |        | select_ln28   | select | auto_sel | 0       |
+|    add_ln38_fu_261_p2                 |     |        | add_ln38      | add    | fabric   | 0       |
+|    add_ln32_fu_226_p2                 |     |        | add_ln32      | add    | fabric   | 0       |
+|    j_3_fu_267_p3                      |     |        | j_3           | select | auto_sel | 0       |
+|    add_32ns_32ns_32_2_1_U3            |     |        | add_ln28      | add    | fabric   | 1       |
+|  + dut_Pipeline_residual_loop         | 0   |        |               |        |          |         |
+|    icmp_ln45_fu_124_p2                |     |        | icmp_ln45     | setlt  | auto     | 0       |
+|    add_ln45_fu_130_p2                 |     |        | add_ln45      | add    | fabric   | 0       |
+|    add_ln49_fu_154_p2                 |     |        | add_ln49      | add    | fabric   | 0       |
++---------------------------------------+-----+--------+---------------+--------+----------+---------+
 
 
 ================================================================
@@ -131,14 +130,20 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+------------------+-----------------------------------------------------------------------------------+
-| Type      | Options          | Location                                                                          |
-+-----------+------------------+-----------------------------------------------------------------------------------+
-| pipeline  | II = 1           | ../../include/xf_data_mover/store_stream_to_master.hpp:53 in storestreamtomaster  |
-| pipeline  | II = 1           | ../../include/xf_data_mover/store_stream_to_master.hpp:62 in storestreamtomaster  |
-| pipeline  | II = 1           | ../../include/xf_data_mover/store_stream_to_master.hpp:102 in storestreamtomaster |
-| pipeline  | II = 1           | ../../include/xf_data_mover/store_stream_to_master.hpp:112 in storestreamtomaster |
-| interface | axis port = in_s | test_store_stream_to_master.cpp:31 in dut                                         |
-+-----------+------------------+-----------------------------------------------------------------------------------+
++----------------+------------------------+--------------------------------------------------------------------------------------+
+| Type           | Options                | Location                                                                             |
++----------------+------------------------+--------------------------------------------------------------------------------------+
+| interface      | m_axi port=mm depth=32 | ../../include/xf_data_mover/store_stream_to_master.hpp:19 in storestreamtomaster, mm |
+| loop_tripcount | min=1 max=32           | ../../include/xf_data_mover/store_stream_to_master.hpp:29 in storestreamtomaster     |
+| pipeline       | II=1                   | ../../include/xf_data_mover/store_stream_to_master.hpp:33 in storestreamtomaster     |
+| unroll         | factor=2               | ../../include/xf_data_mover/store_stream_to_master.hpp:34 in storestreamtomaster     |
+| pipeline       | II=1                   | ../../include/xf_data_mover/store_stream_to_master.hpp:46 in storestreamtomaster     |
+| interface      | m_axi port=mm depth=32 | ../../include/xf_data_mover/store_stream_to_master.hpp:63 in storestreamtomaster, mm |
+| loop_tripcount | min=1 max=32           | ../../include/xf_data_mover/store_stream_to_master.hpp:74 in storestreamtomaster     |
+| pipeline       | II=1                   | ../../include/xf_data_mover/store_stream_to_master.hpp:77 in storestreamtomaster     |
+| unroll         | factor=2               | ../../include/xf_data_mover/store_stream_to_master.hpp:78 in storestreamtomaster     |
+| pipeline       | II=1                   | ../../include/xf_data_mover/store_stream_to_master.hpp:92 in storestreamtomaster     |
+| interface      | axis port = in_s       | test_store_stream_to_master.cpp:31 in dut                                            |
++----------------+------------------------+--------------------------------------------------------------------------------------+
 
 

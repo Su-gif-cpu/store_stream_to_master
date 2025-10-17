@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dut'" level="0">
-<item name = "Date">Fri Oct 17 00:26:09 2025
+<item name = "Date">Fri Oct 17 21:58:59 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">dut.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.30 ns, 8.546 ns, 0.89 ns</column>
+<column name="ap_clk">3.30 ns, 5.001 ns, 0.89 ns</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">17, 4294967280, 0.145 us, 36.703 sec, 18, 4294967281, no</column>
+<column name="">49, 1072, 0.245 us, 5.361 us, 50, 1073, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84">dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2, 3, 4294967235, 25.637 ns, 36.703 sec, 2, 4294967234, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99">dut_Pipeline_VITIS_LOOP_61_3, 2, 33, 10.002 ns, 0.165 us, 1, 32, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_dut_Pipeline_burst_loop_inner_loop_fu_86">dut_Pipeline_burst_loop_inner_loop, 35, 1027, 0.133 us, 3.902 us, 34, 1026, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_dut_Pipeline_residual_loop_fu_101">dut_Pipeline_residual_loop, 2, 33, 10.002 ns, 0.165 us, 1, 32, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

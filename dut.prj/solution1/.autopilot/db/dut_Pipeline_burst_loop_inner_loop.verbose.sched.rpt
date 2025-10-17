@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vitis HLS Report for 'dut_Pipeline_burst_loop_inner_loop'
+================================================================
+* Date:           Fri Oct 17 21:58:59 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        dut.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  3.799 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+------+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval  |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min |  max |                      Type                      |
+    +---------+---------+----------+----------+-----+------+------------------------------------------------+
+    |       35|     1027|  0.133 us|  3.902 us|   34|  1026|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                         |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |        Loop Name        |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +-------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- burst_loop_inner_loop  |       33|     1025|         4|          2|          1|  16 ~ 512|       yes|
+        +-------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.79>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 7 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%add_ln282 = alloca i32 1"   --->   Operation 8 'alloca' 'add_ln282' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%cnt = alloca i32 1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32]   --->   Operation 9 'alloca' 'cnt' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 10 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%cnt_1 = alloca i32 1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32]   --->   Operation 11 'alloca' 'cnt_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 0, i1 %in_s_V_last_V, i1 0, i1 0, void @empty_4"   --->   Operation 12 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mm, void @empty_2, i32 0, i32 0, void @empty_1, i32 4294967295, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_s_V_last_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %in_s_V_strb_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %in_s_V_keep_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in_s_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln28_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %zext_ln28"   --->   Operation 18 'read' 'zext_ln28_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln0 = store i30 0, i30 %indvar_flatten"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln25 = store i32 0, i32 %cnt" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32]   --->   Operation 20 'store' 'store_ln25' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%store_ln32 = store i6 0, i6 %j" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 21 'store' 'store_ln32' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 22 [1/1] (1.58ns)   --->   "%br_ln28 = br void %for.inc.i" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 22 'br' 'br_ln28' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i30 %indvar_flatten" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 23 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [2/2] (2.21ns)   --->   "%icmp_ln28 = icmp_eq  i30 %indvar_flatten_load, i30 %zext_ln28_read" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 24 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 2.21> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 1> <II = 1> <Delay = 2.21> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [2/2] (2.21ns)   --->   "%add_ln28_1 = add i30 %indvar_flatten_load, i30 1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 25 'add' 'add_ln28_1' <Predicate = true> <Delay = 2.21> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 1> <II = 1> <Delay = 2.21> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.79>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%first_iter_0 = phi i1 1, void %newFuncRoot, i1 0, void %for.inc.i.split"   --->   Operation 26 'phi' 'first_iter_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%j_2 = load i6 %j" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 27 'load' 'j_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/2] (2.21ns)   --->   "%icmp_ln28 = icmp_eq  i30 %indvar_flatten_load, i30 %zext_ln28_read" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 28 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 2.21> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 1> <II = 1> <Delay = 2.21> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/2] (2.21ns)   --->   "%add_ln28_1 = add i30 %indvar_flatten_load, i30 1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 29 'add' 'add_ln28_1' <Predicate = true> <Delay = 2.21> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 1> <II = 1> <Delay = 2.21> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln28 = br i1 %icmp_ln28, void %for.inc9.i, void %for.end11.loopexit.i.exitStub" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 30 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%add_ln282_load = load i32 %add_ln282" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 31 'load' 'add_ln282_load' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%cnt_load = load i32 %cnt" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 32 'load' 'cnt_load' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @burst_loop_inner_loop_str"   --->   Operation 33 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 16, i64 512, i64 256"   --->   Operation 34 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i6.i32, i6 %j_2, i32 5" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 35 'bitselect' 'tmp' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.97ns)   --->   "%or_ln25 = or i1 %first_iter_0, i1 %tmp" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32]   --->   Operation 36 'or' 'or_ln25' <Predicate = (!icmp_ln28)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.69ns)   --->   "%select_ln28 = select i1 %tmp, i32 %add_ln282_load, i32 %cnt_load" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 37 'select' 'select_ln28' <Predicate = (!icmp_ln28)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln32 = br i1 %or_ln25, void %for.inc.i.split, void %for.first.iter.for.inc.i" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 38 'br' 'br_ln32' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln28 = trunc i32 %select_ln28" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 39 'trunc' 'trunc_ln28' <Predicate = (!icmp_ln28 & or_ln25)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.58ns)   --->   "%store_ln25 = store i9 %trunc_ln28, i9 %cnt_1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32]   --->   Operation 40 'store' 'store_ln25' <Predicate = (!icmp_ln28 & or_ln25)> <Delay = 1.58>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln32 = br void %for.inc.i.split" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 41 'br' 'br_ln32' <Predicate = (!icmp_ln28 & or_ln25)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (1.82ns)   --->   "%add_ln32 = add i6 %j_2, i6 2" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 42 'add' 'add_ln32' <Predicate = (!icmp_ln28)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [2/2] (2.23ns)   --->   "%add_ln28 = add i32 %select_ln28, i32 32" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 43 'add' 'add_ln28' <Predicate = (!icmp_ln28)> <Delay = 2.23> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 1> <II = 1> <Delay = 2.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (1.58ns)   --->   "%store_ln28 = store i30 %add_ln28_1, i30 %indvar_flatten" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 44 'store' 'store_ln28' <Predicate = (!icmp_ln28)> <Delay = 1.58>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln32 = br void %for.inc.i" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 45 'br' 'br_ln32' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 67 'ret' 'ret_ln0' <Predicate = (icmp_ln28)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 3.41>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%cnt_1_load = load i9 %cnt_1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:38->test_store_stream_to_master.cpp:32]   --->   Operation 46 'load' 'cnt_1_load' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln32 = zext i9 %cnt_1_load" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 47 'zext' 'zext_ln32' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.51ns)   --->   "%empty = read i41 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32]   --->   Operation 48 'read' 'empty' <Predicate = (!icmp_ln28)> <Delay = 0.51> <CoreInst = "regslice">   --->   Core 135 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_data = extractvalue i41 %empty" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32]   --->   Operation 49 'extractvalue' 'tmp_data' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%mm_addr = getelementptr i32 %mm, i64 0, i64 %zext_ln32" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:37->test_store_stream_to_master.cpp:32]   --->   Operation 50 'getelementptr' 'mm_addr' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln37 = store i32 %tmp_data, i9 %mm_addr" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:37->test_store_stream_to_master.cpp:32]   --->   Operation 51 'store' 'store_ln37' <Predicate = (!icmp_ln28)> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 257> <RAM>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_7 = partselect i8 @_ssdm_op_PartSelect.i8.i9.i32.i32, i9 %cnt_1_load, i32 1, i32 8" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:38->test_store_stream_to_master.cpp:32]   --->   Operation 52 'partselect' 'tmp_7' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (1.82ns)   --->   "%add_ln38 = add i9 %cnt_1_load, i9 2" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:38->test_store_stream_to_master.cpp:32]   --->   Operation 53 'add' 'add_ln38' <Predicate = (!icmp_ln28)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (1.18ns)   --->   "%j_3 = select i1 %tmp, i6 2, i6 %add_ln32" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 54 'select' 'j_3' <Predicate = (!icmp_ln28)> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 55 [1/2] (2.23ns)   --->   "%add_ln28 = add i32 %select_ln28, i32 32" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 55 'add' 'add_ln28' <Predicate = (!icmp_ln28)> <Delay = 2.23> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 1> <II = 1> <Delay = 2.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (1.58ns)   --->   "%store_ln25 = store i9 %add_ln38, i9 %cnt_1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32]   --->   Operation 56 'store' 'store_ln25' <Predicate = (!icmp_ln28)> <Delay = 1.58>
+ST_3 : Operation 57 [1/1] (1.58ns)   --->   "%store_ln25 = store i32 %select_ln28, i32 %cnt" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32]   --->   Operation 57 'store' 'store_ln25' <Predicate = (!icmp_ln28)> <Delay = 1.58>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%store_ln28 = store i32 %add_ln28, i32 %add_ln282" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32]   --->   Operation 58 'store' 'store_ln28' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (1.58ns)   --->   "%store_ln32 = store i6 %j_3, i6 %j" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32->test_store_stream_to_master.cpp:32]   --->   Operation 59 'store' 'store_ln32' <Predicate = (!icmp_ln28)> <Delay = 1.58>
+
+State 4 <SV = 3> <Delay = 2.20>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%specpipeline_ln33 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:33->test_store_stream_to_master.cpp:32]   --->   Operation 60 'specpipeline' 'specpipeline_ln33' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%or_ln = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %tmp_7, i1 1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:38->test_store_stream_to_master.cpp:32]   --->   Operation 61 'bitconcatenate' 'or_ln' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln36 = zext i9 %or_ln" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32]   --->   Operation 62 'zext' 'zext_ln36' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.51ns)   --->   "%empty_16 = read i41 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32]   --->   Operation 63 'read' 'empty_16' <Predicate = (!icmp_ln28)> <Delay = 0.51> <CoreInst = "regslice">   --->   Core 135 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_data_1 = extractvalue i41 %empty_16" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32]   --->   Operation 64 'extractvalue' 'tmp_data_1' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%mm_addr_1 = getelementptr i32 %mm, i64 0, i64 %zext_ln36" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:37->test_store_stream_to_master.cpp:32]   --->   Operation 65 'getelementptr' 'mm_addr_1' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] ( I:1.68ns O:1.68ns )   --->   "%store_ln37 = store i32 %tmp_data_1, i9 %mm_addr_1" [T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:37->test_store_stream_to_master.cpp:32]   --->   Operation 66 'store' 'store_ln37' <Predicate = (!icmp_ln28)> <Delay = 1.68> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 2> <II = 1> <Delay = 1.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 257> <RAM>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.300ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 3.799ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar_flatten' [19]  (1.588 ns)
+	'load' operation 30 bit ('indvar_flatten_load', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32) on local variable 'indvar_flatten' [26]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln28', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32) [27]  (2.211 ns)
+
+ <State 2>: 3.799ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('icmp_ln28', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32) [27]  (2.211 ns)
+	'store' operation 0 bit ('store_ln25', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32) of variable 'trunc_ln28', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:28->test_store_stream_to_master.cpp:32 on local variable 'cnt', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32 [41]  (1.588 ns)
+
+ <State 3>: 3.411ns
+The critical path consists of the following:
+	'load' operation 9 bit ('cnt_1_load', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:38->test_store_stream_to_master.cpp:32) on local variable 'cnt', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32 [44]  (0.000 ns)
+	'add' operation 9 bit ('add_ln38', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:38->test_store_stream_to_master.cpp:32) [58]  (1.823 ns)
+	'store' operation 0 bit ('store_ln25', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32) of variable 'add_ln38', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:38->test_store_stream_to_master.cpp:32 on local variable 'cnt', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:25->test_store_stream_to_master.cpp:32 [62]  (1.588 ns)
+
+ <State 4>: 2.200ns
+The critical path consists of the following:
+	axis read operation ('empty_16', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32) on port 'in_s_V_data_V' (T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32) [54]  (0.518 ns)
+	'store' operation 0 bit ('store_ln37', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:37->test_store_stream_to_master.cpp:32) of variable 'tmp.data', T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:36->test_store_stream_to_master.cpp:32 on array 'mm' [57]  (1.682 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

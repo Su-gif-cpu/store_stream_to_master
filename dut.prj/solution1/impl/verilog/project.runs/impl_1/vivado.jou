@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Oct 17 00:34:30 2025
-# Process ID         : 15036
+# Start of session at: Fri Oct 17 22:06:57 2025
+# Process ID         : 17528
 # Current directory  : T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/impl/verilog/project.runs/impl_1
 # Command line       : vivado.exe -log bd_0_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bd_0_wrapper.tcl -notrace
 # Log file           : T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/impl/verilog/project.runs/impl_1/bd_0_wrapper.vdi
@@ -17,8 +17,8 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16390 MB
-# Swap memory        : 8053 MB
-# Total Virtual      : 24443 MB
-# Available Virtual  : 8153 MB
+# Swap memory        : 8321 MB
+# Total Virtual      : 24712 MB
+# Available Virtual  : 4488 MB
 #-----------------------------------------------------------
 source bd_0_wrapper.tcl -notrace

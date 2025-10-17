@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
     Replacements:    
       - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1021273
+        Offset:          1021123
         Length:          0
         ReplacementText: 'VITIS_LOOP_676_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
     Replacements:    
       - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1021739
+        Offset:          1021589
         Length:          0
         ReplacementText: 'VITIS_LOOP_690_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_int_ref.h'
     Replacements:    
       - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1022206
+        Offset:          1022056
         Length:          0
         ReplacementText: 'VITIS_LOOP_704_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,70 +34,16 @@ Diagnostics:
     FilePath:        'T:\Xilinx\Vitis\2024.2\common\technology\autopilot\etc\ap_fixed_base.h'
     Replacements:    
       - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1305564
+        Offset:          1305414
         Length:          0
         ReplacementText: 'VITIS_LOOP_1248_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_51_1:  '
-    FileOffset:      51
-    FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\include\xf_data_mover\store_stream_to_master.hpp'
-    Replacements:    
-      - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1692993
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_51_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_52_2:  '
-    FileOffset:      52
-    FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\include\xf_data_mover\store_stream_to_master.hpp'
-    Replacements:    
-      - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1693036
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_52_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_61_3:  '
-    FileOffset:      61
-    FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\include\xf_data_mover\store_stream_to_master.hpp'
-    Replacements:    
-      - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1693267
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_61_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_100_1:  '
-    FileOffset:      100
-    FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\include\xf_data_mover\store_stream_to_master.hpp'
-    Replacements:    
-      - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1694078
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_100_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_101_2:  '
-    FileOffset:      101
-    FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\include\xf_data_mover\store_stream_to_master.hpp'
-    Replacements:    
-      - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1694121
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_101_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_111_3:  '
-    FileOffset:      111
-    FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\include\xf_data_mover\store_stream_to_master.hpp'
-    Replacements:    
-      - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1694390
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_111_3: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_48_1:  '
     FileOffset:      48
     FilePath:        test_store_stream_to_master.cpp
     Replacements:    
       - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1695602
+        Offset:          1695566
         Length:          0
         ReplacementText: 'VITIS_LOOP_48_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -106,7 +52,7 @@ Diagnostics:
     FilePath:        test_store_stream_to_master.cpp
     Replacements:    
       - FilePath:        'T:\Xilinx\Vitis_Libraries_2024.2_update3\data_mover\L1\tests\store_stream_to_master\dut.prj\solution1\.autopilot\db\test_store_stream_to_master.pp.0.cpp'
-        Offset:          1695865
+        Offset:          1695829
         Length:          0
         ReplacementText: 'VITIS_LOOP_61_2: '
 ...

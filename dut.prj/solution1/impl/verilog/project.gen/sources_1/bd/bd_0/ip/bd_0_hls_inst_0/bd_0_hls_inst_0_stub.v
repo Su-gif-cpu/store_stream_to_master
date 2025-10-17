@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Fri Oct 17 00:32:44 2025
+// Date        : Fri Oct 17 22:05:09 2025
 // Host        : LAPTOP-H2R0E34P running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               t:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.v
@@ -14,7 +14,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,dut,{}" *) (* CORE_GENERATION_INFO = "bd_0_hls_inst_0,dut,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=dut,x_ipVersion=1.0,x_ipCoreRevision=2114306790,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,dut,{}" *) (* CORE_GENERATION_INFO = "bd_0_hls_inst_0,dut,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=dut,x_ipVersion=1.0,x_ipCoreRevision=2114308083,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* IP_DEFINITION_SOURCE = "HLS" *) (* X_CORE_INFO = "dut,Vivado 2024.2" *) (* hls_module = "yes" *) 
 module bd_0_hls_inst_0(mm_ce0, mm_we0, ap_clk, ap_rst_n, ap_done, ap_idle, 
   ap_ready, ap_start, in_s_TDATA, in_s_TKEEP, in_s_TLAST, in_s_TREADY, in_s_TSTRB, in_s_TVALID, 

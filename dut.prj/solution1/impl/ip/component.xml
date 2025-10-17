@@ -222,7 +222,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d27e58a5</spirit:value>
+            <spirit:value>fd7b85c1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -238,7 +238,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a5827336</spirit:value>
+            <spirit:value>b13bd71b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -254,7 +254,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a2eff32f</spirit:value>
+            <spirit:value>143cae44</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -270,7 +270,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f6aaa3a2</spirit:value>
+            <spirit:value>1e5e28ba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -595,11 +595,7 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_add_31ns_31ns_31_2_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/dut_add_32ns_32ns_32_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_add_30ns_30ns_30_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -607,11 +603,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_dut_Pipeline_burst_loop_inner_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_dut_Pipeline_VITIS_LOOP_61_3.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_dut_Pipeline_residual_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -627,19 +623,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_31ns_31ns_1_2_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_icmp_30ns_30ns_1_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_31ns_31ns_1_2_1_sub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_32ns_32ns_1_2_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_32ns_32ns_1_2_1_sub.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_icmp_30ns_30ns_1_2_1_sub.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -666,12 +654,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_add_31ns_31ns_31_2_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/dut_add_32ns_32ns_32_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_add_30ns_30ns_30_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -681,12 +664,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_dut_Pipeline_burst_loop_inner_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_dut_Pipeline_VITIS_LOOP_61_3.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_dut_Pipeline_residual_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -706,22 +689,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_31ns_31ns_1_2_1.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_icmp_30ns_30ns_1_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_31ns_31ns_1_2_1_sub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_32ns_32ns_1_2_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/dut_icmp_32ns_32ns_1_2_1_sub.v</spirit:name>
+        <spirit:name>hdl/verilog/dut_icmp_30ns_30ns_1_2_1_sub.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -757,11 +730,7 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_add_31ns_31ns_31_2_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/dut_add_32ns_32ns_32_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_add_30ns_30ns_30_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -769,11 +738,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_dut_Pipeline_burst_loop_inner_loop.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_dut_Pipeline_VITIS_LOOP_61_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_dut_Pipeline_residual_loop.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -781,19 +750,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_31ns_31ns_1_2_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_icmp_30ns_30ns_1_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_31ns_31ns_1_2_1_sub.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_32ns_32ns_1_2_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_32ns_32ns_1_2_1_sub.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_icmp_30ns_30ns_1_2_1_sub.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -807,18 +768,13 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/dut.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5000f641</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_5e56d1dc</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_add_31ns_31ns_31_2_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/dut_add_32ns_32ns_32_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_add_30ns_30ns_30_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -828,12 +784,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_dut_Pipeline_burst_loop_inner_loop.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_dut_Pipeline_VITIS_LOOP_61_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_dut_Pipeline_residual_loop.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -843,22 +799,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_31ns_31ns_1_2_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_icmp_30ns_30ns_1_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_31ns_31ns_1_2_1_sub.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_32ns_32ns_1_2_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/dut_icmp_32ns_32ns_1_2_1_sub.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/dut_icmp_30ns_30ns_1_2_1_sub.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -930,11 +876,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">17</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">49</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">18 ~ 4294967281</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">50 ~ 1073</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -947,8 +893,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Dut</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114306790</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-16T16:31:00Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114308083</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-17T14:03:31Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -957,9 +903,9 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4ae384f4"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2d6edb79"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="321a74a6"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a5d92b8c"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="522b278c"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="24744dd6"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

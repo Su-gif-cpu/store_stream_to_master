@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Oct 17 00:36:33 2025
+| Date         : Fri Oct 17 22:24:04 2025
 | Host         : LAPTOP-H2R0E34P running 64-bit major release  (build 9200)
 | Command      : report_drc -file bd_0_wrapper_drc_routed.rpt -pb bd_0_wrapper_drc_routed.pb -rpx bd_0_wrapper_drc_routed.rpx
 | Design       : bd_0_wrapper
@@ -24,21 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 2
+             Checks found: 1
 +--------+----------+--------------------+--------+
 | Rule   | Severity | Description        | Checks |
 +--------+----------+--------------------+--------+
-| DPIP-1 | Warning  | Input pipelining   | 1      |
 | ZPS7-1 | Warning  | PS7 block required | 1      |
 +--------+----------+--------------------+--------+
 
 2. REPORT DETAILS
 -----------------
-DPIP-1#1 Warning
-Input pipelining  
-DSP bd_0_i/hls_inst/inst/grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84/cnt_1_fu_58_reg input bd_0_i/hls_inst/inst/grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84/cnt_1_fu_58_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
 ZPS7-1#1 Warning
 PS7 block required  
 The PS7 cell must be used in this Zynq design in order to enable correct default configuration.

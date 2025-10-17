@@ -25748,7 +25748,9 @@ using std::wctomb;
 # 21 "test_store_stream_to_master.cpp" 2
 
 # 1 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp" 1
-# 21 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp"
+
+
+
 # 1 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_int.h" 1
 # 10 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_int.h"
 # 1 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot\\etc/ap_common.h" 1
@@ -31289,7 +31291,7 @@ inline __attribute__((nodebug)) bool operator!=(
 }
 # 370 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_fixed.h" 2
 # 365 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_int.h" 2
-# 22 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp" 2
+# 5 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp" 2
 # 1 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_axi_sdata.h" 1
 # 15 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot\\ap_axi_sdata.h"
 # 1 "T:/Xilinx/Vitis/2024.2/common/technology/autopilot/ap_int.h" 1
@@ -31748,75 +31750,104 @@ private:
 };
 
 }
-# 23 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp" 2
+# 6 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp" 2
 
 
 namespace xf {
 namespace data_mover {
-# 42 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp"
+
+
+
+
 template <int WM, int WS, int BLEN = 32>
-void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0> >& s, ap_uint<WM>* mm, uint64_t size) {
+void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0>>& s,
+                        ap_uint<WM>* mm,
+                        uint64_t size) {
 
+#pragma HLS INTERFACE m_axi port=mm depth=32
 
-
-    const int bytePerData = WM / 8;
+ constexpr int bytePerData = WM / 8;
     const int nBlks = size / bytePerData + ((size % bytePerData) > 0);
     const int nBurst = nBlks / BLEN;
+
     int cnt = 0;
-    VITIS_LOOP_51_1: for (int i = 0; i < nBurst; i++) {
-        VITIS_LOOP_52_2: for (int j = 0; j < BLEN; j++) {
-#pragma HLS pipeline II = 1
+
+
+    burst_loop: for (int burst_idx = 0; burst_idx < nBurst; burst_idx++) {
+#pragma HLS LOOP_TRIPCOUNT min=1 max=32
+
+
+ inner_loop: for (int j = 0; j < BLEN; j++) {
+#pragma HLS PIPELINE II=1
+#pragma HLS UNROLL factor=2
+
  ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
     }
+
+
     int leftBlks = nBlks % BLEN;
     if (leftBlks > 0) {
-        VITIS_LOOP_61_3: for (int i = 0; i < leftBlks; i++) {
-#pragma HLS pipeline II = 1
+        residual_loop: for (int i = 0; i < leftBlks; i++) {
+#pragma HLS PIPELINE II=1
  ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
     }
 }
-# 86 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\\xf_data_mover/store_stream_to_master.hpp"
+
+
+
+
 template <int WM, int WS, int BLEN = 32>
-void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0> >& s,
-                         ap_uint<WM>* mm,
-                         uint64_t size,
-                         hls::stream<ap_uint<1> >& vld_str,
-                         uint64_t* cntData) {
+void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0>>& s,
+                        ap_uint<WM>* mm,
+                        uint64_t size,
+                        hls::stream<ap_uint<1>>& vld_str,
+                        uint64_t* cntData) {
+#pragma HLS INTERFACE m_axi port=mm depth=32
 
-
-
-    const int bytePerData = WM / 8;
+ constexpr int bytePerData = WM / 8;
     const int nBlks = size / bytePerData + ((size % bytePerData) > 0);
     const int nBurst = nBlks / BLEN;
+
     int cnt = 0;
+
     vld_str.write_nb(1);
-    VITIS_LOOP_100_1: for (int i = 0; i < nBurst; i++) {
-        VITIS_LOOP_101_2: for (int j = 0; j < BLEN; j++) {
-#pragma HLS pipeline II = 1
+
+    burst_loop: for (int burst_idx = 0; burst_idx < nBurst; burst_idx++) {
+#pragma HLS LOOP_TRIPCOUNT min=1 max=32
+
+ inner_loop: for (int j = 0; j < BLEN; j++) {
+#pragma HLS PIPELINE II=1
+#pragma HLS UNROLL factor=2
+
  ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
-        *cntData = cnt * bytePerData;
+
+
+        if (cntData) *cntData = cnt * bytePerData;
     }
+
     int leftBlks = nBlks % BLEN;
     if (leftBlks > 0) {
-        VITIS_LOOP_111_3: for (int i = 0; i < leftBlks; i++) {
-#pragma HLS pipeline II = 1
+        residual_loop: for (int i = 0; i < leftBlks; i++) {
+#pragma HLS PIPELINE II=1
  ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
     }
-    *cntData = cnt * bytePerData;
+
+    if (cntData) *cntData = cnt * bytePerData;
     vld_str.write_nb(1);
 }
+
 }
 }
 # 23 "test_store_stream_to_master.cpp" 2

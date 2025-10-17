@@ -4,15 +4,15 @@
     "calls": "",
     "file": "test_store_stream_to_master.cpp",
     "fileloc": 28,
-    "instructions": 78,
+    "instructions": 93,
     "loads": {
-      "L": 4
+      "L": 6
     },
     "name": "dut",
     "stores": {
-      "L": 2,
-      "T": 2
+      "L": 3,
+      "T": 3
     },
-    "total_instructions": 84
+    "total_instructions": 102
   }
 }

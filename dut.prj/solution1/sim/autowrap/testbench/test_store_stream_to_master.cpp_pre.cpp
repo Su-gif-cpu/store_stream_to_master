@@ -26943,7 +26943,9 @@ using std::wctomb;
 # 21 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/test_store_stream_to_master.cpp" 2
 
 # 1 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp" 1
-# 21 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp"
+
+
+
 # 1 "T:/Xilinx/Vitis/2024.2/include/ap_int.h" 1
 # 10 "T:/Xilinx/Vitis/2024.2/include/ap_int.h"
 # 1 "T:/Xilinx/Vitis/2024.2/include/etc/ap_common.h" 1
@@ -54987,7 +54989,7 @@ inline bool operator!=(
 }
 # 370 "T:/Xilinx/Vitis/2024.2/include/ap_fixed.h" 2
 # 365 "T:/Xilinx/Vitis/2024.2/include/ap_int.h" 2
-# 22 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp" 2
+# 5 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp" 2
 # 1 "T:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h" 1
 # 15 "T:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h"
 # 1 "T:/Xilinx/Vitis/2024.2/include/ap_int.h" 1
@@ -77760,75 +77762,104 @@ template <std::size_t WData, std::size_t WUser, std::size_t WId,
           std::size_t WDest>
 using qdma_axis = hls::axis<ap_uint<WData>, WUser, WId, WDest,
                             0b01111111 ^ 0b00100000, false>;
-# 23 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp" 2
+# 6 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp" 2
 
 
 namespace xf {
 namespace data_mover {
-# 42 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp"
+
+
+
+
 template <int WM, int WS, int BLEN = 32>
-void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0> >& s, ap_uint<WM>* mm, uint64_t size) {
+void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0>>& s,
+                        ap_uint<WM>* mm,
+                        uint64_t size) {
 
-    static_assert(WM == WS, "WM should be equal to WS in the current implementation");
+#pragma HLS INTERFACE m_axi port=mm depth=32
 
-    const int bytePerData = WM / 8;
+    constexpr int bytePerData = WM / 8;
     const int nBlks = size / bytePerData + ((size % bytePerData) > 0);
     const int nBurst = nBlks / BLEN;
+
     int cnt = 0;
-    for (int i = 0; i < nBurst; i++) {
-        for (int j = 0; j < BLEN; j++) {
-#pragma HLS pipeline II = 1
+
+
+    burst_loop: for (int burst_idx = 0; burst_idx < nBurst; burst_idx++) {
+#pragma HLS LOOP_TRIPCOUNT min=1 max=32
+
+
+        inner_loop: for (int j = 0; j < BLEN; j++) {
+#pragma HLS PIPELINE II=1
+#pragma HLS UNROLL factor=2
+
             ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
     }
+
+
     int leftBlks = nBlks % BLEN;
     if (leftBlks > 0) {
-        for (int i = 0; i < leftBlks; i++) {
-#pragma HLS pipeline II = 1
+        residual_loop: for (int i = 0; i < leftBlks; i++) {
+#pragma HLS PIPELINE II=1
             ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
     }
 }
-# 86 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp"
+
+
+
+
 template <int WM, int WS, int BLEN = 32>
-void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0> >& s,
-                         ap_uint<WM>* mm,
-                         uint64_t size,
-                         hls::stream<ap_uint<1> >& vld_str,
-                         uint64_t* cntData) {
+void storeStreamToMaster(hls::stream<ap_axiu<WS, 0, 0, 0>>& s,
+                        ap_uint<WM>* mm,
+                        uint64_t size,
+                        hls::stream<ap_uint<1>>& vld_str,
+                        uint64_t* cntData) {
+#pragma HLS INTERFACE m_axi port=mm depth=32
 
-    static_assert(WM == WS, "WM should be equal to WS in the current implementation");
-
-    const int bytePerData = WM / 8;
+    constexpr int bytePerData = WM / 8;
     const int nBlks = size / bytePerData + ((size % bytePerData) > 0);
     const int nBurst = nBlks / BLEN;
+
     int cnt = 0;
+
     vld_str.write_nb(1);
-    for (int i = 0; i < nBurst; i++) {
-        for (int j = 0; j < BLEN; j++) {
-#pragma HLS pipeline II = 1
+
+    burst_loop: for (int burst_idx = 0; burst_idx < nBurst; burst_idx++) {
+#pragma HLS LOOP_TRIPCOUNT min=1 max=32
+
+        inner_loop: for (int j = 0; j < BLEN; j++) {
+#pragma HLS PIPELINE II=1
+#pragma HLS UNROLL factor=2
+
             ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
-        *cntData = cnt * bytePerData;
+
+
+        if (cntData) *cntData = cnt * bytePerData;
     }
+
     int leftBlks = nBlks % BLEN;
     if (leftBlks > 0) {
-        for (int i = 0; i < leftBlks; i++) {
-#pragma HLS pipeline II = 1
+        residual_loop: for (int i = 0; i < leftBlks; i++) {
+#pragma HLS PIPELINE II=1
             ap_axiu<WS, 0, 0, 0> tmp = s.read();
             mm[cnt] = tmp.data;
             cnt++;
         }
     }
-    *cntData = cnt * bytePerData;
+
+    if (cntData) *cntData = cnt * bytePerData;
     vld_str.write_nb(1);
 }
+
 }
 }
 # 23 "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/test_store_stream_to_master.cpp" 2

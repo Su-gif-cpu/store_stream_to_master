@@ -1,10 +1,7 @@
-dut_icmp_31ns_31ns_1_2_1
-dut_icmp_31ns_31ns_1_2_1_sub
-dut_add_31ns_31ns_31_2_1
+dut_icmp_30ns_30ns_1_2_1
+dut_icmp_30ns_30ns_1_2_1_sub
+dut_add_30ns_30ns_30_2_1
 dut_add_32ns_32ns_32_2_1
-dut_icmp_32ns_32ns_1_2_1
-dut_icmp_32ns_32ns_1_2_1_sub
-dut_add_32ns_32ns_32_1_1
 dut_flow_control_loop_pipe_sequential_init
 dut_flow_control_loop_pipe_sequential_init
 dut_sub_32ns_32ns_32_2_1
@@ -12,6 +9,6 @@ dut_regslice_both
 dut_regslice_both
 dut_regslice_both
 dut_regslice_both
-dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2
-dut_Pipeline_VITIS_LOOP_61_3
+dut_Pipeline_burst_loop_inner_loop
+dut_Pipeline_residual_loop
 dut

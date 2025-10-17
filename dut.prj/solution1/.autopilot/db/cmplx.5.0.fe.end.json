@@ -1,6 +1,25 @@
 {
     "1": {
-        "name": "dut_Pipeline_VITIS_LOOP_61_3",
+        "name": "dut_Pipeline_burst_loop_inner_loop",
+        "file": "test_store_stream_to_master.cpp",
+        "fileloc": "32",
+        "instructions": "58",
+        "total_instructions": "58",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "9",
+            "T": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "dut_Pipeline_residual_loop",
         "file": "test_store_stream_to_master.cpp",
         "fileloc": "32",
         "instructions": "32",
@@ -18,32 +37,13 @@
             "L": "1"
         }
     },
-    "2": {
-        "name": "dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2",
-        "file": "test_store_stream_to_master.cpp",
-        "fileloc": "32",
-        "instructions": "44",
-        "total_instructions": "44",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "4"
-        },
-        "stores": {
-            "L": "8",
-            "T": "1"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
     "0": {
         "name": "dut",
         "file": "test_store_stream_to_master.cpp",
         "fileloc": "28",
         "instructions": "40",
-        "total_instructions": "116",
-        "calls": "2 1",
+        "total_instructions": "130",
+        "calls": "1 2",
         "basicblocks": "1"
     }
 }

@@ -121,10 +121,10 @@ entry:1 %trunc_ln28 = trunc i64 %sz_read
 
 <Node id="19" bw="1" op_0_bw="2" op_1_bw="2">
 <![CDATA[
-entry:12 %icmp_ln48 = icmp_ne  i2 %trunc_ln28, i2 0
+entry:12 %icmp_ln22 = icmp_ne  i2 %trunc_ln28, i2 0
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln48"/></StgValue>
+<StgValue><ssdm name="icmp_ln22"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -154,10 +154,10 @@ entry:13 %trunc_ln1 = partselect i32 @_ssdm_op_PartSelect.i32.i64.i32.i32, i64 %
 
 <Node id="21" bw="32" op_0_bw="1">
 <![CDATA[
-entry:14 %zext_ln48 = zext i1 %icmp_ln48
+entry:14 %zext_ln22 = zext i1 %icmp_ln22
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln48"/></StgValue>
+<StgValue><ssdm name="zext_ln22"/></StgValue>
 </operation>
 
 <operation id="19" st_id="2" stage="2" lat="2">
@@ -169,7 +169,7 @@ entry:14 %zext_ln48 = zext i1 %icmp_ln48
 
 <Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:15 %nBlks = add i32 %trunc_ln1, i32 %zext_ln48
+entry:15 %nBlks = add i32 %trunc_ln1, i32 %zext_ln22
 
 ]]></Node>
 <StgValue><ssdm name="nBlks"/></StgValue>
@@ -187,7 +187,7 @@ entry:15 %nBlks = add i32 %trunc_ln1, i32 %zext_ln48
 
 <Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:15 %nBlks = add i32 %trunc_ln1, i32 %zext_ln48
+entry:15 %nBlks = add i32 %trunc_ln1, i32 %zext_ln22
 
 ]]></Node>
 <StgValue><ssdm name="nBlks"/></StgValue>
@@ -232,10 +232,10 @@ entry:20 %tmp_1 = partselect i27 @_ssdm_op_PartSelect.i27.i32.i32.i32, i32 %nBlk
 
 <Node id="39" bw="5" op_0_bw="32">
 <![CDATA[
-entry:32 %trunc_ln59 = trunc i32 %nBlks
+entry:32 %trunc_ln43 = trunc i32 %nBlks
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln59"/></StgValue>
+<StgValue><ssdm name="trunc_ln43"/></StgValue>
 </operation>
 </state>
 
@@ -250,10 +250,10 @@ entry:32 %trunc_ln59 = trunc i32 %nBlks
 
 <Node id="24" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:17 %sub_ln49 = sub i32 0, i32 %nBlks
+entry:17 %sub_ln23 = sub i32 0, i32 %nBlks
 
 ]]></Node>
-<StgValue><ssdm name="sub_ln49"/></StgValue>
+<StgValue><ssdm name="sub_ln23"/></StgValue>
 </operation>
 </state>
 
@@ -268,10 +268,10 @@ entry:17 %sub_ln49 = sub i32 0, i32 %nBlks
 
 <Node id="24" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:17 %sub_ln49 = sub i32 0, i32 %nBlks
+entry:17 %sub_ln23 = sub i32 0, i32 %nBlks
 
 ]]></Node>
-<StgValue><ssdm name="sub_ln49"/></StgValue>
+<StgValue><ssdm name="sub_ln23"/></StgValue>
 </operation>
 
 <operation id="26" st_id="5" stage="1" lat="1">
@@ -284,7 +284,7 @@ entry:17 %sub_ln49 = sub i32 0, i32 %nBlks
 
 <Node id="25" bw="27" op_0_bw="27" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-entry:18 %tmp = partselect i27 @_ssdm_op_PartSelect.i27.i32.i32.i32, i32 %sub_ln49, i32 5, i32 31
+entry:18 %tmp = partselect i27 @_ssdm_op_PartSelect.i27.i32.i32.i32, i32 %sub_ln23, i32 5, i32 31
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -300,10 +300,10 @@ entry:18 %tmp = partselect i27 @_ssdm_op_PartSelect.i27.i32.i32.i32, i32 %sub_ln
 
 <Node id="40" bw="5" op_0_bw="32">
 <![CDATA[
-entry:33 %trunc_ln59_1 = trunc i32 %sub_ln49
+entry:33 %trunc_ln43_1 = trunc i32 %sub_ln23
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln59_1"/></StgValue>
+<StgValue><ssdm name="trunc_ln43_1"/></StgValue>
 </operation>
 </state>
 
@@ -319,10 +319,10 @@ entry:33 %trunc_ln59_1 = trunc i32 %sub_ln49
 
 <Node id="26" bw="27" op_0_bw="27" op_1_bw="27">
 <![CDATA[
-entry:19 %sub_ln49_1 = sub i27 0, i27 %tmp
+entry:19 %sub_ln23_1 = sub i27 0, i27 %tmp
 
 ]]></Node>
-<StgValue><ssdm name="sub_ln49_1"/></StgValue>
+<StgValue><ssdm name="sub_ln23_1"/></StgValue>
 </operation>
 
 <operation id="29" st_id="6" stage="1" lat="1">
@@ -335,10 +335,10 @@ entry:19 %sub_ln49_1 = sub i27 0, i27 %tmp
 
 <Node id="41" bw="6" op_0_bw="5">
 <![CDATA[
-entry:34 %zext_ln59 = zext i5 %trunc_ln59_1
+entry:34 %zext_ln43 = zext i5 %trunc_ln43_1
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln59"/></StgValue>
+<StgValue><ssdm name="zext_ln43"/></StgValue>
 </operation>
 
 <operation id="30" st_id="6" stage="1" lat="1">
@@ -351,10 +351,10 @@ entry:34 %zext_ln59 = zext i5 %trunc_ln59_1
 
 <Node id="42" bw="6" op_0_bw="6" op_1_bw="6">
 <![CDATA[
-entry:35 %sub_ln59 = sub i6 0, i6 %zext_ln59
+entry:35 %sub_ln43 = sub i6 0, i6 %zext_ln43
 
 ]]></Node>
-<StgValue><ssdm name="sub_ln59"/></StgValue>
+<StgValue><ssdm name="sub_ln43"/></StgValue>
 </operation>
 </state>
 
@@ -369,7 +369,7 @@ entry:35 %sub_ln59 = sub i6 0, i6 %zext_ln59
 
 <Node id="28" bw="27" op_0_bw="1" op_1_bw="27" op_2_bw="27">
 <![CDATA[
-entry:21 %nBurst = select i1 %tmp_3, i27 %sub_ln49_1, i27 %tmp_1
+entry:21 %nBurst = select i1 %tmp_3, i27 %sub_ln23_1, i27 %tmp_1
 
 ]]></Node>
 <StgValue><ssdm name="nBurst"/></StgValue>
@@ -384,10 +384,10 @@ entry:21 %nBurst = select i1 %tmp_3, i27 %sub_ln49_1, i27 %tmp_1
 
 <Node id="29" bw="26" op_0_bw="27">
 <![CDATA[
-entry:22 %trunc_ln49 = trunc i27 %nBurst
+entry:22 %trunc_ln23 = trunc i27 %nBurst
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln49"/></StgValue>
+<StgValue><ssdm name="trunc_ln23"/></StgValue>
 </operation>
 
 <operation id="33" st_id="7" stage="1" lat="1">
@@ -399,10 +399,10 @@ entry:22 %trunc_ln49 = trunc i27 %nBurst
 
 <Node id="30" bw="1" op_0_bw="27" op_1_bw="27">
 <![CDATA[
-entry:23 %icmp_ln51 = icmp_sgt  i27 %tmp_1, i27 0
+entry:23 %icmp_ln28 = icmp_sgt  i27 %tmp_1, i27 0
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln51"/></StgValue>
+<StgValue><ssdm name="icmp_ln28"/></StgValue>
 </operation>
 
 <operation id="34" st_id="7" stage="1" lat="1">
@@ -414,10 +414,10 @@ entry:23 %icmp_ln51 = icmp_sgt  i27 %tmp_1, i27 0
 
 <Node id="36" bw="4" op_0_bw="27">
 <![CDATA[
-entry:29 %trunc_ln51 = trunc i27 %nBurst
+entry:29 %trunc_ln28_1 = trunc i27 %nBurst
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln51"/></StgValue>
+<StgValue><ssdm name="trunc_ln28_1"/></StgValue>
 </operation>
 
 <operation id="35" st_id="7" stage="1" lat="1">
@@ -430,10 +430,10 @@ entry:29 %trunc_ln51 = trunc i27 %nBurst
 
 <Node id="43" bw="6" op_0_bw="5">
 <![CDATA[
-entry:36 %zext_ln59_1 = zext i5 %trunc_ln59
+entry:36 %zext_ln43_1 = zext i5 %trunc_ln43
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln59_1"/></StgValue>
+<StgValue><ssdm name="zext_ln43_1"/></StgValue>
 </operation>
 
 <operation id="36" st_id="7" stage="1" lat="1">
@@ -445,10 +445,10 @@ entry:36 %zext_ln59_1 = zext i5 %trunc_ln59
 
 <Node id="44" bw="6" op_0_bw="1" op_1_bw="6" op_2_bw="6">
 <![CDATA[
-entry:37 %select_ln59_1 = select i1 %tmp_3, i6 %sub_ln59, i6 %zext_ln59_1
+entry:37 %select_ln43_1 = select i1 %tmp_3, i6 %sub_ln43, i6 %zext_ln43_1
 
 ]]></Node>
-<StgValue><ssdm name="select_ln59_1"/></StgValue>
+<StgValue><ssdm name="select_ln43_1"/></StgValue>
 </operation>
 </state>
 
@@ -481,10 +481,10 @@ entry:25 %empty = icmp_sgt  i27 %nBurst, i27 0
 
 <Node id="33" bw="26" op_0_bw="1" op_1_bw="26" op_2_bw="26">
 <![CDATA[
-entry:26 %empty_14 = select i1 %empty, i26 %trunc_ln49, i26 0
+entry:26 %empty_17 = select i1 %empty, i26 %trunc_ln23, i26 0
 
 ]]></Node>
-<StgValue><ssdm name="empty_14"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </operation>
 </state>
 
@@ -497,9 +497,9 @@ entry:26 %empty_14 = select i1 %empty, i26 %trunc_ln49, i26 0
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="31" op_0_bw="31" op_1_bw="26" op_2_bw="5">
+<Node id="34" bw="30" op_0_bw="30" op_1_bw="26" op_2_bw="4">
 <![CDATA[
-entry:27 %tmp_2 = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i26.i5, i26 %empty_14, i5 0
+entry:27 %tmp_2 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i26.i4, i26 %empty_17, i4 0
 
 ]]></Node>
 <StgValue><ssdm name="tmp_2"/></StgValue>
@@ -512,9 +512,9 @@ entry:27 %tmp_2 = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i26.i5, i26 %e
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="0" op_0_bw="0" op_1_bw="31" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="32">
+<Node id="35" bw="0" op_0_bw="0" op_1_bw="30" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="32">
 <![CDATA[
-entry:28 %call_ln28 = call void @dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2, i31 %tmp_2, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
+entry:28 %call_ln28 = call void @dut_Pipeline_burst_loop_inner_loop, i30 %tmp_2, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
 
 ]]></Node>
 <StgValue><ssdm name="call_ln28"/></StgValue>
@@ -530,9 +530,9 @@ entry:28 %call_ln28 = call void @dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2, i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="0" op_0_bw="0" op_1_bw="31" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="32">
+<Node id="35" bw="0" op_0_bw="0" op_1_bw="30" op_2_bw="32" op_3_bw="4" op_4_bw="4" op_5_bw="1" op_6_bw="32">
 <![CDATA[
-entry:28 %call_ln28 = call void @dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2, i31 %tmp_2, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
+entry:28 %call_ln28 = call void @dut_Pipeline_burst_loop_inner_loop, i30 %tmp_2, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
 
 ]]></Node>
 <StgValue><ssdm name="call_ln28"/></StgValue>
@@ -542,13 +542,13 @@ entry:28 %call_ln28 = call void @dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2, i
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln51" val="1"/>
+<or_exp><and_exp><literal name="icmp_ln28" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="37" bw="9" op_0_bw="9" op_1_bw="4" op_2_bw="5">
 <![CDATA[
-entry:30 %cnt_1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i4.i5, i4 %trunc_ln51, i5 0
+entry:30 %cnt_1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i4.i5, i4 %trunc_ln28_1, i5 0
 
 ]]></Node>
 <StgValue><ssdm name="cnt_1"/></StgValue>
@@ -563,10 +563,10 @@ entry:30 %cnt_1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i4.i5, i4 %trunc
 
 <Node id="38" bw="9" op_0_bw="1" op_1_bw="9" op_2_bw="9">
 <![CDATA[
-entry:31 %select_ln59 = select i1 %icmp_ln51, i9 %cnt_1, i9 0
+entry:31 %select_ln43 = select i1 %icmp_ln28, i9 %cnt_1, i9 0
 
 ]]></Node>
-<StgValue><ssdm name="select_ln59"/></StgValue>
+<StgValue><ssdm name="select_ln43"/></StgValue>
 </operation>
 </state>
 
@@ -581,10 +581,10 @@ entry:31 %select_ln59 = select i1 %icmp_ln51, i9 %cnt_1, i9 0
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="9" op_2_bw="6" op_3_bw="32" op_4_bw="4" op_5_bw="4" op_6_bw="1" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0">
 <![CDATA[
-entry:38 %call_ln59 = call void @dut_Pipeline_VITIS_LOOP_61_3, i9 %select_ln59, i6 %select_ln59_1, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
+entry:38 %call_ln43 = call void @dut_Pipeline_residual_loop, i9 %select_ln43, i6 %select_ln43_1, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
 
 ]]></Node>
-<StgValue><ssdm name="call_ln59"/></StgValue>
+<StgValue><ssdm name="call_ln43"/></StgValue>
 </operation>
 </state>
 
@@ -749,10 +749,10 @@ entry:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %s
 
 <Node id="31" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:24 %specaxissidechannel_ln51 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 0, i1 %in_s_V_last_V, i1 0, i1 0, void @empty_4
+entry:24 %specaxissidechannel_ln28 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 0, i1 %in_s_V_last_V, i1 0, i1 0, void @empty_4
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln51"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln28"/></StgValue>
 </operation>
 
 <operation id="56" st_id="13" stage="1" lat="2">
@@ -764,10 +764,10 @@ entry:24 %specaxissidechannel_ln51 = specaxissidechannel void @_ssdm_op_SpecAXIS
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="9" op_2_bw="6" op_3_bw="32" op_4_bw="4" op_5_bw="4" op_6_bw="1" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0">
 <![CDATA[
-entry:38 %call_ln59 = call void @dut_Pipeline_VITIS_LOOP_61_3, i9 %select_ln59, i6 %select_ln59_1, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
+entry:38 %call_ln43 = call void @dut_Pipeline_residual_loop, i9 %select_ln43, i6 %select_ln43_1, i32 %in_s_V_data_V, i4 %in_s_V_keep_V, i4 %in_s_V_strb_V, i1 %in_s_V_last_V, i32 %mm
 
 ]]></Node>
-<StgValue><ssdm name="call_ln59"/></StgValue>
+<StgValue><ssdm name="call_ln43"/></StgValue>
 </operation>
 
 <operation id="57" st_id="13" stage="1" lat="1">

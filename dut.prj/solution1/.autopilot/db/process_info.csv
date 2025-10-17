@@ -1,3 +1,3 @@
 ,AESL_inst_dut,,module_status1.csv
-,grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84,,module_status2.csv
-,grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99,,module_status3.csv
+,grp_dut_Pipeline_burst_loop_inner_loop_fu_86,,module_status2.csv
+,grp_dut_Pipeline_residual_loop_fu_101,,module_status3.csv

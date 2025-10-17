@@ -12,7 +12,7 @@
     "basicblocks": 21,
     "calls": "",
     "file": "store_stream_to_master.hpp",
-    "fileloc": 43,
+    "fileloc": 15,
     "instructions": 66,
     "loads": {
       "L": 2

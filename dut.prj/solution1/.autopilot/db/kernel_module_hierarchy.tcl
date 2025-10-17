@@ -1,10 +1,10 @@
 set ModuleHierarchy {[{
 "Name" : "dut","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_dut_Pipeline_burst_loop_inner_loop_fu_86","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
-		{"Name" : "VITIS_LOOP_51_1_VITIS_LOOP_52_2","ID" : "2","Type" : "pipeline"},]},
-	{"Name" : "grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99","ID" : "3","Type" : "sequential",
+		{"Name" : "burst_loop_inner_loop","ID" : "2","Type" : "pipeline"},]},
+	{"Name" : "grp_dut_Pipeline_residual_loop_fu_101","ID" : "3","Type" : "sequential",
 		"SubLoops" : [
-		{"Name" : "VITIS_LOOP_61_3","ID" : "4","Type" : "pipeline"},]},]
+		{"Name" : "residual_loop","ID" : "4","Type" : "pipeline"},]},]
 }]}

@@ -6,12 +6,31 @@ Function:        _Z3dutRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb
 Args:            
   - Callee:          'void xf::data_mover::storeStreamToMaster<32, 32, 32>(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>*, unsigned long long)'
     DebugLoc:        { File: 'T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp', 
-                       Line: 43, Column: 0 }
+                       Line: 17, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'dut(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>*, unsigned long long)'
     DebugLoc:        { File: test_store_stream_to_master.cpp, Line: 30, 
                        Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: 'T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp', 
+                   Line: 17, Column: 0 }
+Function:        _ZN2xf10data_mover19storeStreamToMasterILi32ELi32ELi32EEEvRN3hls6streamINS2_4axisI7ap_uintIXT0_EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS5_IXT_EEy
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        inner_loop
+  - String:          ''' ('
+  - LoopLoc:         'T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32:14'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'xf::data_mover::storeStreamToMaster<32, 32, 32>'
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
 ...
 --- !Missed
 Pass:            inline
@@ -21,7 +40,7 @@ Function:        _Z3dutRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb
 Args:            
   - Callee:          'void xf::data_mover::storeStreamToMaster<32, 32, 32>(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>*, unsigned long long)'
     DebugLoc:        { File: 'T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp', 
-                       Line: 43, Column: 0 }
+                       Line: 17, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'dut(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>*, unsigned long long)'
     DebugLoc:        { File: test_store_stream_to_master.cpp, Line: 30, 
@@ -49,7 +68,7 @@ Args:
   - String:          'Inlining function '''
   - Callee:          'void xf::data_mover::storeStreamToMaster<32, 32, 32>(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>*, unsigned long long)'
     DebugLoc:        { File: 'T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp', 
-                       Line: 43, Column: 0 }
+                       Line: 17, Column: 0 }
   - String:          ''' into '''
   - Caller:          'dut(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, ap_uint<32>*, unsigned long long)'
     DebugLoc:        { File: test_store_stream_to_master.cpp, Line: 30, 

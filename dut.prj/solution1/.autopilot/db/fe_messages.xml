@@ -29,17 +29,35 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis/2024.2/common/technology/autopilot\ap_axi_sdata.h:400:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:53:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=mm depth=32" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:62:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=32" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:102:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:112:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=mm depth=32" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=32" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:77:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:78:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:92:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="storeStreamToMaster" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/run_hls.tcl:50:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="dut" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dut" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
@@ -47,8 +65,11 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="test_store_stream_to_master.cpp:31:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="dut" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port = in_s" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:17:0" msg_body="Unrolling loop 'inner_loop' (T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32:14) in function 'xf::data_mover::storeStreamToMaster&lt;32, 32, 32&gt;' partially with a factor of 2">
+        <args Factor="2" LoopLoc="T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp:32:14" LoopName="inner_loop"/>
+    </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="test_store_stream_to_master.cpp:30:0" msg_body="Inlining function 'void xf::data_mover::storeStreamToMaster&lt;32, 32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;*, unsigned long long)' into 'dut(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;*, unsigned long long)'">
-        <args Callee="void xf::data_mover::storeStreamToMaster&lt;32, 32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;*, unsigned long long)" Callee-DebugLoc="File {T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp} Line 43 Column 0" Caller="dut(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;*, unsigned long long)" Caller-DebugLoc="File test_store_stream_to_master.cpp Line 30 Column 0"/>
+        <args Callee="void xf::data_mover::storeStreamToMaster&lt;32, 32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;*, unsigned long long)" Callee-DebugLoc="File {T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include\xf_data_mover/store_stream_to_master.hpp} Line 17 Column 0" Caller="dut(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;*, unsigned long long)" Caller-DebugLoc="File test_store_stream_to_master.cpp Line 30 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>
 
