@@ -1,0 +1,22 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_0": {
+			"proto_instances": {
+				"/hls_inst/in_s": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "in_s_TDATA[31:0]"},
+						"TKEEP": { "actual": "in_s_TKEEP[3:0]"},
+						"TLAST": { "actual": "in_s_TLAST[0:0]"},
+						"TREADY": { "actual": "in_s_TREADY"},
+						"TSTRB": { "actual": "in_s_TSTRB[3:0]"},
+						"TVALID": { "actual": "in_s_TVALID"}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "dut",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "dut"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/run_hls.tcl",
+    "sourceLine": 50,
+    "success": true
+  }
+]

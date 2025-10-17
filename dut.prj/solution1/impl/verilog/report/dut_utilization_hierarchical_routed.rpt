@@ -1,0 +1,56 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri Oct 17 00:36:46 2025
+| Host         : LAPTOP-H2R0E34P running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/dut_utilization_hierarchical_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------------------------+------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|                              Instance                              |                              Module                              | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------------------------------------------+------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                                                       |                                                            (top) |        437 |        437 |       0 |    0 | 741 |      0 |      0 |          1 |
+|   bd_0_i                                                           |                                                             bd_0 |        437 |        437 |       0 |    0 | 741 |      0 |      0 |          1 |
+|     hls_inst                                                       |                                                  bd_0_hls_inst_0 |        437 |        437 |       0 |    0 | 741 |      0 |      0 |          1 |
+|       inst                                                         |                                              bd_0_hls_inst_0_dut |        437 |        437 |       0 |    0 | 741 |      0 |      0 |          1 |
+|         (inst)                                                     |                                              bd_0_hls_inst_0_dut |         80 |         80 |       0 |    0 | 236 |      0 |      0 |          0 |
+|         add_32ns_32ns_32_2_1_U25                                   |                         bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1 |          2 |          2 |       0 |    0 |  33 |      0 |      0 |          0 |
+|           (add_32ns_32ns_32_2_1_U25)                               |                         bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1 |          0 |          0 |       0 |    0 |  33 |      0 |      0 |          0 |
+|           u1                                                       |            bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1_comb_adder_4 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          0 |
+|           u2                                                       |            bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1_comb_adder_5 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          0 |
+|         grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84     | bd_0_hls_inst_0_dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2 |        251 |        251 |       0 |    0 | 353 |      0 |      0 |          1 |
+|           (grp_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2_fu_84) | bd_0_hls_inst_0_dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2 |          7 |          7 |       0 |    0 | 180 |      0 |      0 |          1 |
+|           add_31ns_31ns_31_2_1_U2                                  |                         bd_0_hls_inst_0_dut_add_31ns_31ns_31_2_1 |          2 |          2 |       0 |    0 |  17 |      0 |      0 |          0 |
+|           add_32ns_32ns_32_2_1_U3                                  |                       bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1_0 |          2 |          2 |       0 |    0 |  29 |      0 |      0 |          0 |
+|             (add_32ns_32ns_32_2_1_U3)                              |                       bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1_0 |          1 |          1 |       0 |    0 |  29 |      0 |      0 |          0 |
+|             u1                                                     |              bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1_comb_adder |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          0 |
+|           add_32ns_32ns_32_2_1_U5                                  |                       bd_0_hls_inst_0_dut_add_32ns_32ns_32_2_1_1 |          2 |          2 |       0 |    0 |  29 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U                 |     bd_0_hls_inst_0_dut_flow_control_loop_pipe_sequential_init_2 |         34 |         34 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           icmp_31ns_31ns_1_2_1_U1                                  |                         bd_0_hls_inst_0_dut_icmp_31ns_31ns_1_2_1 |         52 |         52 |       0 |    0 |  47 |      0 |      0 |          0 |
+|             base                                                   |                     bd_0_hls_inst_0_dut_icmp_31ns_31ns_1_2_1_sub |         52 |         52 |       0 |    0 |  47 |      0 |      0 |          0 |
+|           icmp_32ns_32ns_1_2_1_U4                                  |                         bd_0_hls_inst_0_dut_icmp_32ns_32ns_1_2_1 |        155 |        155 |       0 |    0 |  49 |      0 |      0 |          0 |
+|             base                                                   |                     bd_0_hls_inst_0_dut_icmp_32ns_32ns_1_2_1_sub |        155 |        155 |       0 |    0 |  49 |      0 |      0 |          0 |
+|         grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99                     |                 bd_0_hls_inst_0_dut_dut_Pipeline_VITIS_LOOP_61_3 |         32 |         32 |       0 |    0 |  17 |      0 |      0 |          0 |
+|           (grp_dut_Pipeline_VITIS_LOOP_61_3_fu_99)                 |                 bd_0_hls_inst_0_dut_dut_Pipeline_VITIS_LOOP_61_3 |          2 |          2 |       0 |    0 |  15 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U                 |       bd_0_hls_inst_0_dut_flow_control_loop_pipe_sequential_init |         30 |         30 |       0 |    0 |   2 |      0 |      0 |          0 |
+|         regslice_both_in_s_V_data_V_U                              |                                bd_0_hls_inst_0_dut_regslice_both |         40 |         40 |       0 |    0 |  69 |      0 |      0 |          0 |
+|         sub_32ns_32ns_32_2_1_U26                                   |                         bd_0_hls_inst_0_dut_sub_32ns_32ns_32_2_1 |         32 |         32 |       0 |    0 |  33 |      0 |      0 |          0 |
+|           (sub_32ns_32ns_32_2_1_U26)                               |                         bd_0_hls_inst_0_dut_sub_32ns_32ns_32_2_1 |         32 |         32 |       0 |    0 |  33 |      0 |      0 |          0 |
+|           u2                                                       |              bd_0_hls_inst_0_dut_sub_32ns_32ns_32_2_1_comb_adder |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
++--------------------------------------------------------------------+------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

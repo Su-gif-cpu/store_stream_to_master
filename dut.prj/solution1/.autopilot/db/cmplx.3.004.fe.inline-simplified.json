@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "test_store_stream_to_master.cpp",
+    "fileloc": 28,
+    "instructions": 92,
+    "loads": {
+      "L": 2
+    },
+    "name": "dut",
+    "stores": {
+      "T": 2
+    },
+    "total_instructions": 92
+  }
+}

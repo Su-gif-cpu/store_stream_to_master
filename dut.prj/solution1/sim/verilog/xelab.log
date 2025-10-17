@@ -1,0 +1,95 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: T:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_dut_top glbl -Oenable_linking_all_libraries -prj dut.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_24 -L floating_point_v7_1_19 --lib ieee_proposed=./ieee_proposed -s dut 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/AESL_automem_mm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_mm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/AESL_axi_s_in_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_dut_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_add_31ns_31ns_31_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_add_31ns_31ns_31_2_1
+INFO: [VRFC 10-311] analyzing module dut_add_31ns_31ns_31_2_1_comb_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_add_32ns_32ns_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_add_32ns_32ns_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_add_32ns_32ns_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_add_32ns_32ns_32_2_1
+INFO: [VRFC 10-311] analyzing module dut_add_32ns_32ns_32_2_1_comb_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_dut_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_dut_Pipeline_VITIS_LOOP_61_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_dut_Pipeline_VITIS_LOOP_61_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_icmp_31ns_31ns_1_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_icmp_31ns_31ns_1_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_icmp_31ns_31ns_1_2_1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_icmp_31ns_31ns_1_2_1_sub
+INFO: [VRFC 10-311] analyzing module dut_icmp_31ns_31ns_1_2_1_sub_comb_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_icmp_32ns_32ns_1_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_icmp_32ns_32ns_1_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_icmp_32ns_32ns_1_2_1_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_icmp_32ns_32ns_1_2_1_sub
+INFO: [VRFC 10-311] analyzing module dut_icmp_32ns_32ns_1_2_1_sub_comb_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dut_sub_32ns_32ns_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_sub_32ns_32ns_32_2_1
+INFO: [VRFC 10-311] analyzing module dut_sub_32ns_32ns_32_2_1_comb_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/dut.prj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.dut_icmp_31ns_31ns_1_2_1_sub_com...
+Compiling module xil_defaultlib.dut_icmp_31ns_31ns_1_2_1_sub
+Compiling module xil_defaultlib.dut_icmp_31ns_31ns_1_2_1(ID=1,NU...
+Compiling module xil_defaultlib.dut_add_31ns_31ns_31_2_1_comb_ad...
+Compiling module xil_defaultlib.dut_add_31ns_31ns_31_2_1_comb_ad...
+Compiling module xil_defaultlib.dut_add_31ns_31ns_31_2_1
+Compiling module xil_defaultlib.dut_add_32ns_32ns_32_2_1_comb_ad...
+Compiling module xil_defaultlib.dut_add_32ns_32ns_32_2_1
+Compiling module xil_defaultlib.dut_icmp_32ns_32ns_1_2_1_sub_com...
+Compiling module xil_defaultlib.dut_icmp_32ns_32ns_1_2_1_sub_com...
+Compiling module xil_defaultlib.dut_icmp_32ns_32ns_1_2_1_sub
+Compiling module xil_defaultlib.dut_icmp_32ns_32ns_1_2_1(ID=1,NU...
+Compiling module xil_defaultlib.dut_add_32ns_32ns_32_1_1
+Compiling module xil_defaultlib.dut_flow_control_loop_pipe_seque...
+Compiling module xil_defaultlib.dut_dut_Pipeline_VITIS_LOOP_51_1...
+Compiling module xil_defaultlib.dut_dut_Pipeline_VITIS_LOOP_61_3
+Compiling module xil_defaultlib.dut_sub_32ns_32ns_32_2_1_comb_ad...
+Compiling module xil_defaultlib.dut_sub_32ns_32ns_32_2_1
+Compiling module xil_defaultlib.dut_regslice_both(DataWidth=32)
+Compiling module xil_defaultlib.dut_regslice_both(DataWidth=4)
+Compiling module xil_defaultlib.dut_regslice_both(DataWidth=1)
+Compiling module xil_defaultlib.dut
+Compiling module xil_defaultlib.AESL_automem_mm
+Compiling module xil_defaultlib.fifo(DEPTH=257,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=257,WIDTH=4)
+Compiling module xil_defaultlib.fifo(DEPTH=257,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_in_s
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_dut_top
+Compiling module work.glbl
+Built simulation snapshot dut

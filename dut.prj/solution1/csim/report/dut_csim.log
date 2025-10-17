@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../test_store_stream_to_master.cpp in debug mode
+   Generating csim.exe
+Testing storeStreamToMaster with 1025 bytes of input...
+Master port width is 32
+Totally 257 data blocks
+PASS: 257 input blocks verified.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 257
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

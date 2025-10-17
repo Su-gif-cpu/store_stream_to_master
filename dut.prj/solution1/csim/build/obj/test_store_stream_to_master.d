@@ -1,0 +1,23 @@
+obj/test_store_stream_to_master.o: \
+  ../../../../test_store_stream_to_master.cpp \
+  T:/Xilinx/Vitis_Libraries_2024.2_update3/data_mover/L1/tests/store_stream_to_master/../../../L1/include/xf_data_mover/store_stream_to_master.hpp \
+  T:/Xilinx/Vitis/2024.2/include/ap_int.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_common.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_decl.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_private.h \
+  T:/Xilinx/Vitis/2024.2/include/hls_half.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h \
+  T:/Xilinx/Vitis/2024.2/include/hls_fpo.h \
+  T:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h \
+  T:/Xilinx/Vitis/2024.2/include/gmp.h \
+  T:/Xilinx/Vitis/2024.2/include/mpfr.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/hls_half_x_utils.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_int_base.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_int_ref.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_int_special.h \
+  T:/Xilinx/Vitis/2024.2/include/ap_fixed.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_fixed_base.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_fixed_ref.h \
+  T:/Xilinx/Vitis/2024.2/include/etc/ap_fixed_special.h \
+  T:/Xilinx/Vitis/2024.2/include/ap_axi_sdata.h \
+  T:/Xilinx/Vitis/2024.2/include/hls_stream.h
